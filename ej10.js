@@ -1,12 +1,14 @@
-var d1, d2; 
-var num1, num2; 
-function js(){
-for(var j=0; j<=36000; j++){
-    for(var i=1; i<=6; i++){
-       return Math.random(num1 == d1 && num2 == d2);
-       
-    }
-    var resultado=d1 + d2; 
+let resultados = new Array(13).fill(0); 
+function lanzarDado(){
+return Math.floor(Math.random()* 6 +1); 
 }
-document.write(resultado); 
+for(let i=0; i< 36000; i++){
+    let d1=lanzarDado();
+    let d2=lanzarDado(); 
+    let suma= d1 + d2; 
+
+    resultados[suma]++; 
 }
+ for(let i=2; i<=12; i++){
+    console.log(`la suma ${i} aparecio ${resultados[i]} veces. `); 
+ }
