@@ -6,6 +6,19 @@
     <title>EJERCICIO 5</title>
 </head>
 <body>
-    <script src="ej5.js"></script>
+        <script>
+  var numero = parseInt(prompt("Ingresa un número entero para calcular su factorial:"));
+  var factorial = 1;
+
+  if (numero < 0) {
+    alert("El factorial no está definido para números negativos.");
+  } else {
+    for (var i = 1; i <= numero; i++) {
+      factorial *= i;
+    }
+    alert("El factorial de " + numero + " es: " + factorial);
+  }
+</script>
+
 </body>
 </html>
